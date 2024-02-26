@@ -7,6 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm --prefix ./app run build && cordova build android",
+    "emulate": "npm --prefix ./app run build && cordova emulate android",
+    "device": "npm --prefix ./app run build && cordova run android --device",
     "dev": "npm --prefix ./app run dev"
   },
   "keywords": [
@@ -17,12 +19,17 @@
   "devDependencies": {
     "cordova-android": "^12.0.1",
     "cordova-browser": "^7.0.0",
-    "cordova-plugin-browsersync": "^1.1.0"
+    "cordova-plugin-browsersync": "^1.1.0",
+    "cordova-plugin-fullscreen": "^1.3.0",
+    "cordova-plugin-screen-orientation": "^3.0.4",
+    "es6-promise-plugin": "^4.2.2"
   },
   "cordova": {
-    "plugins": {},
+    "plugins": {
+      "cordova-plugin-fullscreen": {},
+      "cordova-plugin-screen-orientation": {}
+    },
     "platforms": [
-      "android",
       "browser"
     ]
   }

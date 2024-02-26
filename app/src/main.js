@@ -4,6 +4,9 @@ import { GameOver } from './scenes/GameOver';
 import { MainMenu } from './scenes/MainMenu';
 import { Preloader } from './scenes/Preloader';
 
+AndroidFullScreen.immersiveMode(() => { }, () => { });
+window.screen.orientation.lock('portrait')
+
 const ratio = window.innerWidth < 600 ? 2 : 1;
 
 //  Find out more information about the Game Config at:
