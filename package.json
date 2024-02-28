@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm --prefix ./app run build && cordova build android",
-    "emulate": "npm --prefix ./app run build && cordova emulate android",
-    "device": "npm --prefix ./app run build && cordova run android --device",
+    "build": "npm --prefix ./app run build",
+    "emulate": "npm --prefix ./app run build",
+    "device": "npm --prefix ./app run build",
     "dev": "npm --prefix ./app run dev"
   },
   "keywords": [

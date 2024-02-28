@@ -4,9 +4,6 @@ import { GameOver } from './scenes/GameOver';
 import { MainMenu } from './scenes/MainMenu';
 import { Preloader } from './scenes/Preloader';
 
-AndroidFullScreen.immersiveMode(() => { }, () => { });
-window.screen.orientation.lock('portrait')
-
 const ratio = window.innerWidth < 600 ? 2 : 1;
 
 //  Find out more information about the Game Config at:
@@ -16,7 +13,7 @@ const config = {
     width: screen.width,
     height: screen.height,
     parent: 'game-container',
-    backgroundColor: '#028af8',
+    backgroundColor: '#000000',
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
