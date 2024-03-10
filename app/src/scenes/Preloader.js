@@ -49,7 +49,17 @@ export class Preloader extends Scene
         this.load.image('space-background', 'space-background.png');
         this.load.image('terran', 'terran.png');
         this.load.image('ship', 'ship.png');
+        this.load.spritesheet(
+            'asteroid',
+            'spritesheet/asteroid-sprite.png',
+            { frameWidth: 96, frameHeight: 96 }
+        )
         this.load.audio('titleMusic', 'bg.mp3');
+        this.load.audio('laser-gun', 'laser-gun.mp3');
+        this.load.audio('game-1', 'loop/game-1.mp3');
+        this.load.audio('explosion', 'explosion.mp3');
+        this.load.audio('rumble', 'rumble.mp3');
+        this.load.image('fireball', 'fireball.png', {rotation: 90});
         this.load.svg('muted', 'muted.svg', { width: 43, height: 43 } );
     }
 
@@ -61,5 +71,6 @@ export class Preloader extends Scene
 
         //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
         this.scene.start('Game');
+
     }
 }

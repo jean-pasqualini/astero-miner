@@ -2,6 +2,7 @@ package com.creativeguys.asterominer
 
 import android.content.Context
 import android.webkit.JavascriptInterface
+import android.webkit.WebView
 import android.widget.Toast
 
 class JavascriptInterface(private val context: Context) {

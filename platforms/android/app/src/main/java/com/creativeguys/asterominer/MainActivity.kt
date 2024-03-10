@@ -21,17 +21,19 @@ class MainActivity : AppCompatActivity() {
             it.systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
 
+        var mediaPlayer = MediaPlayer.create(this, R.raw.bg)
+        mediaPlayer.isLooping = true
+
         findViewById<TextView>(R.id.start).setOnClickListener {
             val intent = Intent(this, Game::class.java)
             startActivity(intent)
+            mediaPlayer.stop()
+            finish()
         }
 
         findViewById<TextView>(R.id.btnMuteUnmute).setOnClickListener {
             toggleMuteUnmute()
         }
-
-        var mediaPlayer = MediaPlayer.create(this, R.raw.bg)
-        mediaPlayer.isLooping = true
         mediaPlayer.start()
     }
 

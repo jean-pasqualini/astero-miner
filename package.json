@@ -32,5 +32,8 @@
     "platforms": [
       "browser"
     ]
+  },
+  "dependencies": {
+    "phaser-plugin-debug-draw": "^7.1.0"
   }
 }
